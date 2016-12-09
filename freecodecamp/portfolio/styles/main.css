@@ -32,10 +32,15 @@ h6 {
 	margin-left: 200px;
 }
 
+#contact_page{
+	margin-left: 300px;
+}
+
 button{
 	display: block;
 	float: left;
 }
+
 
 
 /* Remove margins from "page content" on small screens */

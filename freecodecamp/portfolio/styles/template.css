@@ -27,7 +27,6 @@ aside,
 details,
 figcaption,
 figure,
-footer,
 header,
 main,
 menu,
@@ -35,6 +34,11 @@ nav,
 section,
 summary {
     display: block
+}
+
+#footer{
+	display: block;
+	margin-left: 200px;
 }
 
 audio,
