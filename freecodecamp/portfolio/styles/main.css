@@ -17,8 +17,7 @@ h6 {
 
 .w3-sidenav {
 	width: 120px;
-    background-color: #222 !important;
-
+	background-color: #222 !important;
 }
 
 
@@ -28,66 +27,142 @@ h6 {
 	margin-left: 120px
 }
 
-#page{
+#page {
 	margin-left: 200px;
 }
 
-#contact_page{
+#contact_page {
 	margin-left: 300px;
 }
 
-button{
+button {
 	display: block;
 	float: left;
 }
 
 .wrapper {
-    position: relative;
-    padding: 0;
-    width:100%;
-    display:block;
+	position: relative;
+	padding: 0;
+	width: 100%;
+	display: block;
 }
+
 .text {
-    position: absolute;
-    top: 0;
-    color:#f00;
-    background-color:;
-    width: 100%;
-    line-height:100px;
-    text-align: center;
-    z-index: 10;
-    opacity: 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
+	position: absolute;
+	top: 0;
+	color: #f00;
+	background-color: ;
+	width: 100%;
+	line-height: 100px;
+	text-align: center;
+	z-index: 10;
+	opacity: 0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
 }
+
 .text:hover {
-    opacity:1;
-}
+	opacity: 1;
 }
 
+
+}
 img {
-    z-index:1;
+	z-index: 1;
+}
+.flip-container {
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-o-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000;
+	-ms-transform: perspective(1000px);
+	-moz-transform: perspective(1000px);
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
 }
 
-.flip {
-    height: 199px;
-    width: 300px;
-    margin: 0 auto;
+/* for IE */
+.flip-container:hover .back,
+.flip-container.hover .back {
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	transform: rotateY(0deg);
 }
-.flip img {
-    width: 300px;
-    height: auto;
+.flip-container:hover .front,
+.flip-container.hover .front {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
 }
-.flip .back {
-    background: orange;
-    color: #fff;
-    text-align: center;
+
+/* END: for IE */
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+	-ms-transition: 0.6s;
+	-moz-transition: 0.6s;
+	-moz-transform: perspective(1000px);
+	-moz-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 420px;
+	height: 420px;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+}
+.front,
+.back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+	-o-transition: 0.6s;
+	-o-transform-style: preserve-3d;
+	-ms-transition: 0.6s;
+	-ms-transform-style: preserve-3d;
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: absolute;
+	padding: 10px;
+
+}
+.front {
+	-webkit-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	background-position: center center;
+	z-index: 2;
+}
+.back {
+	background: white;
+	color: orange;
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+	-o-transform: rotateY(-180deg);
+	-ms-transform: rotateY(180deg);
+	transform: rotateY(-180deg);
+}
+
+.front img{
+	width: 420px;
+	border-radius: 15%;
 }
 
 /* Remove margins from "page content" on small screens */
-
 @media only screen and (max-width: 600px) {
 	#main {
 		margin-left: 0
