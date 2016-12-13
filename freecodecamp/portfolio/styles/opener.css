@@ -1,5 +1,13 @@
 #opener {
     z-index: 2;
+	display: block;
+	margin-bottom: 20px;
+	margin-left: 44%;
+}
+
+img{
+	border-radius: 50%;
+	width: 30%;
 }
 #opener:after {
     content: "";
@@ -18,10 +26,14 @@
 }
 #opener strong {
     background: orange;
-    padding: 10px;
+    padding: 0px;
 }
-#opener:hover strong {
-    position: relative;
+#opener	:hover strong {
+	position: relative;
     z-index: 2;
 
+}
+
+a{
+	text-decoration: none;
 }
