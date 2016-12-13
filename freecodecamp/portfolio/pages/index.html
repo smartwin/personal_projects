@@ -8,10 +8,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/styles/template.css">
 	<link rel="stylesheet" href="/styles/main.css">
-	<script src="../js/modernizr.custom.js"></script>
 	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="/path/to/jquery.flip.min.js"></script>
+	<script>
+		$(function () {
+			$(".flip").flip({
+				trigger: 'hover'
+			});
+		});
+	</script>
 </head>
 
 <body class="w3-black">
@@ -19,7 +27,7 @@
 	<!-- Icon Bar (Sidenav - hidden on small screens) -->
 	<nav class="w3-sidenav w3-center w3-small w3-hide-small">
 		<!-- Avatar image in top left corner -->
-		<img src="../images/me.jpeg" style="width:100%">
+		<img src="../images/me.jpeg" alt="Picture of Myia Dickens" style="width:100%">
 		<a class="w3-padding-large w3-deep-orange" href="../pages/index.html">
 			<i class="fa fa-home w3-xxlarge"></i>
 			<p>HOME</p>
@@ -72,14 +80,20 @@
 			<!-- Grid for photos -->
 			<div class="w3-row-padding cs-style-4" style="margin:0 -16px">
 				<div class="w3-half">
-					<figure>
-						<div><img src="../images/ebook.JPG" alt="Picture of Ebook Website" width="105%"></div>
-						<figcaption>
-							<h3>Ebook</h3>
-							<span>This is an Ebook website of the first three chapters of Alice in Wonderland.</span>
-							<a href="http://dribbble.com/shots/1116775-Safari">Take a look</a>
-						</figcaption>
-					</figure>
+					<div class="flip">
+						<div class="front">
+							<img src="../images/ebook.JPG" alt="Picture of Ebook Website" />
+						</div>
+						<div class="back">
+							<h3>Ebook Assignment</h3>
+							<p>This is an ebook of the first three chapters of ALice in Wonderland. There is a day and night version of the book.</p>
+							<a href="http://www.collegewebserver.com/~mdickens/projects/alice_ebook/pages/" width="30">
+								<button class="w3-btn w3-teal w3-padding-large" type="submit">
+									Take A look!
+								</button>
+							</a>
+						</div>
+					</div>
 					<div class="thumbnail_projects">
 						<a href="http://www.collegewebserver.com/~mdickens/projects/project3/pages/"><img src="../images/favoritecity.JPG" alt="" width="100%" class="cards" /></a>
 						<h4>Favorite City</h4>
@@ -129,7 +143,8 @@
 			<!-- End footer -->
 		</footer>
 	</div>
-	<script src="../js/toucheffects.js"></script>
+
+
 </body>
 
 </html>
