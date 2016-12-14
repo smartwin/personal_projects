@@ -31,14 +31,15 @@ h6 {
 	margin-left: 200px;
 }
 
+#about{
+	margin-left: 300px;
+	padding: 2px;
+}
+
 #contact_page {
 	margin-left: 300px;
 }
 
-button {
-	display: block;
-	float: left;
-}
 
 .wrapper {
 	position: relative;
@@ -158,8 +159,8 @@ img {
 }
 
 .front img{
-	width: 420px;
-	border-radius: 15%;
+	width: 100%;
+	border-radius: 5%;
 }
 
 /* Remove margins from "page content" on small screens */
